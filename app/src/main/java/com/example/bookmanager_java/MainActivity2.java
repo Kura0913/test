@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -54,6 +55,9 @@ public class MainActivity2 extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
         Stetho.initializeWithDefaults(this);
 
+
+        Button btn_back = findViewById(R.id.btn_back);
+
         mDBHelper = new SQLiteDataBaseHelper(this, DB_NAME
                 , null, DB_VERSION, TABLE_NAME);//初始化資料庫
 
@@ -77,6 +81,15 @@ public class MainActivity2 extends AppCompatActivity {
         //btn_Clear功能，清除輸入欄位的資料
         btn_clear.setOnClickListener(v->{
             clearAll();
+        });
+
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity2.this,MyService4.class);
+                startService(intent);
+                finish();
+            }
         });
 
         //btn_Create功能，創建新的資料
