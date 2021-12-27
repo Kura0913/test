@@ -1,0 +1,9 @@
+com/example/bookmanager_java/MainActivity2.java
+ com.example.bookmanager_java.MainActivity2
+ com.example.bookmanager_java.MainActivity2$1
+ com.example.bookmanager_java.MainActivity2$MyAdapter
+ com.example.bookmanager_java.MainActivity2$MyAdapter$ViewHolder
+com/example/bookmanager_java/SQLiteDataBaseHelper.java
+ com.example.bookmanager_java.SQLiteDataBaseHelper
+com/example/bookmanager_java/BuildConfig.java
+ com.example.bookmanager_java.BuildConfig
